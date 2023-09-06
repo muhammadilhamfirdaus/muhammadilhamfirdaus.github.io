@@ -1,0 +1,56 @@
+body {
+    background-color: #df960dd7;
+}
+
+h1,h2 {
+    font-size: 60px;
+    text-align: center;
+    font-family: Arial;
+    margin: 8px;
+}
+
+.mulai {
+    display: block;
+    margin: auto;
+    background-color: black;
+    color: rgb(231, 228, 228);
+    width: 80px;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+.tanah {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.tanah::after {
+    content: '';
+    display: block;
+    width: 200px;
+    background: url(../img/tanah.png) bottom center no-repeat;
+    height: 100px;
+    background-size: 80%;
+    position: absolute;
+    bottom: -12px;
+}
+
+.tikus {
+    width: 80%;
+    height: 100%;
+    background: url(../img/tikus.png) bottom center no-repeat;
+    background-size: 70%;
+    position: absolute;
+    top: 150px;
+    transition: top 0.3s;
+}
+
+.tanah.muncul .tikus {
+    top: -20px;
+}
